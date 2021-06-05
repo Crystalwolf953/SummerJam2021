@@ -22,7 +22,6 @@ public class Plate : MonoBehaviour
     {
         if(other.tag == "Ball")
         {
-            Debug.Log("Collide");
             activated = true;
         }
     }
