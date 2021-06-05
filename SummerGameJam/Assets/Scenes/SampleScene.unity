@@ -1280,7 +1280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rotation_Speed: 1
   Rotation_Friction: 1
-  Rotation_Smoothness: 2
+  Rotation_Smoothness: 1
   horizontalRotationRestrictAngle: 30
   verticalRotationRestrictAngle: 30
   cameraController: {fileID: 1476419539}
