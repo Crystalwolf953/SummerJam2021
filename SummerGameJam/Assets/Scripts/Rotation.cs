@@ -32,5 +32,15 @@ public class Rotation : MonoBehaviour
         rotateTo = Quaternion.Euler(horizontalRotation, 0, verticalRotation);
 
         transform.rotation = Quaternion.Lerp(currentRotation, rotateTo, Time.deltaTime * Rotation_Smoothness);
+
+        Debug.Log(verticalRotation);
+    }
+
+    public void ResetCurrentRotation()
+    {
+        currentRotation = Quaternion.identity;
+        rotateTo = Quaternion.identity;
+        verticalRotation = 0;
+        horizontalRotation = 0;
     }
 }
