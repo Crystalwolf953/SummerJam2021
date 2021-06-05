@@ -22,6 +22,7 @@ public class LevelManager : MonoBehaviour
     #endregion
 
     public GameObject mainObject;
+    public GameObject ball;
     public Rotation rotation;
     public Plate plate1;
     private bool hasActivated;
@@ -50,13 +51,21 @@ public class LevelManager : MonoBehaviour
     {
         float t = 0f;
         Quaternion start = target.rotation;
+        Vector3 from = ball.transform.position;
+        Vector3 to;
         while (t < dur)
         {
+            to = plate1.gameObject.transform.position;
             target.rotation = Quaternion.Slerp(start, rot, t / dur);
+            ball.transform.position = Vector3.Lerp(from, new Vector3(to.x, to.y + 0.5f, to.z), t / dur);
             yield return null;
             t += Time.deltaTime;
         }
+
         target.rotation = rot;
+
+        ball.GetComponent<Rigidbody>().isKinematic = true;
+        ball.transform.SetParent(mainObject.transform);
         rotation.ResetCurrentRotation();
     }
 }

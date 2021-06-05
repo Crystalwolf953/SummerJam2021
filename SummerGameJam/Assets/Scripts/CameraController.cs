@@ -5,12 +5,13 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public int positionIndex = 0;
+    public int previousPositionIndex;
     private int numberOfPositions = 4;
 
     // Used for rotating the camera
     private Quaternion currentRotation;
     private Quaternion rotateTo;
-    private bool rotating;
+    public bool rotating;
 
     // Start is called before the first frame update
     void Start()
@@ -24,12 +25,14 @@ public class CameraController : MonoBehaviour
         if(Input.GetAxis("RotateCameraLeft") > 0f && !rotating)
         {
             rotating = true;
+            previousPositionIndex = positionIndex;
             positionIndex = (positionIndex + 3) % numberOfPositions;
             StartCoroutine(RotateMe(Vector3.up * 90, 1f));
         }
         else if(Input.GetAxis("RotateCameraRight") > 0f && !rotating)
         {
             rotating = true;
+            previousPositionIndex = positionIndex;
             positionIndex = (positionIndex + 1) % numberOfPositions;
             StartCoroutine(RotateMe(Vector3.up * -90, 1f));
         }

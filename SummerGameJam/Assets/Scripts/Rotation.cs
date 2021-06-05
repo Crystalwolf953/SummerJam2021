@@ -20,11 +20,16 @@ public class Rotation : MonoBehaviour
 
     public CameraController cameraController;
     private int cameraPositionIndex;
+    private int previousCameraPositionIndex;
+    public bool cameraRotating;
+    public bool wasRotating;
 
     // Update is called once per frame
     void Update()
     {
         cameraPositionIndex = cameraController.positionIndex;
+        previousCameraPositionIndex = cameraController.previousPositionIndex;
+        cameraRotating = cameraController.rotating;
 
         // Get the input for rotation from the horizontal axis
         horizontalRotation += Input.GetAxis("Horizontal") * Rotation_Speed * Rotation_Friction;
@@ -37,22 +42,147 @@ public class Rotation : MonoBehaviour
         // Get the current rotation of the object
         currentRotation = transform.rotation;
 
-        // Depending on the position of the camera, change the control scheme of the rotation
+        // Depending on the position of the camera and where the camera is coming from, change the control scheme of the rotation and the start rotation of the main object
         if(cameraPositionIndex == 0)
         {
-            rotateTo = Quaternion.Euler(horizontalRotation, 0, verticalRotation);
+            if(cameraRotating)
+            {
+                if(previousCameraPositionIndex == 1)
+                {
+                    rotateTo = Quaternion.Euler(-verticalRotation, 0, horizontalRotation);
+                }
+                else
+                {
+                    rotateTo = Quaternion.Euler(verticalRotation, 0, -horizontalRotation);
+                }
+                wasRotating = true;
+            }
+            else
+            {
+                if(wasRotating)
+                {
+                    if(previousCameraPositionIndex == 1)
+                    {
+                        float temp = horizontalRotation;
+                        horizontalRotation = -verticalRotation;
+                        verticalRotation = temp;
+                    }
+                    else
+                    {
+                        float temp = horizontalRotation;
+                        horizontalRotation = verticalRotation;
+                        verticalRotation = -temp;
+                    }
+                    wasRotating = false;
+                }
+                rotateTo = Quaternion.Euler(horizontalRotation, 0, verticalRotation);
+            }
         }
         else if(cameraPositionIndex == 1)
         {
-            rotateTo = Quaternion.Euler(-verticalRotation, 0, horizontalRotation);
+            if(cameraRotating)
+            {
+                if (previousCameraPositionIndex == 2)
+                {
+                    rotateTo = Quaternion.Euler(-horizontalRotation, 0, -verticalRotation);
+                }
+                else
+                {
+                    rotateTo = Quaternion.Euler(horizontalRotation, 0, verticalRotation);
+                }
+                wasRotating = true;
+            }
+            else
+            {
+                if(wasRotating)
+                {
+
+                    if(previousCameraPositionIndex == 2)
+                    {
+                        float temp = horizontalRotation;
+                        horizontalRotation = -verticalRotation;
+                        verticalRotation = temp;
+                    }
+                    else
+                    {
+                        float temp = horizontalRotation;
+                        horizontalRotation = verticalRotation;
+                        verticalRotation = -temp;
+                    }
+                    wasRotating = false;
+                }
+                rotateTo = Quaternion.Euler(-verticalRotation, 0, horizontalRotation);
+            }
         }
-        else if (cameraPositionIndex == 2)
+        else if(cameraPositionIndex == 2)
         {
-            rotateTo = Quaternion.Euler(-horizontalRotation, 0, -verticalRotation);
+            if(cameraRotating)
+            {
+                if (previousCameraPositionIndex == 3)
+                {
+                    rotateTo = Quaternion.Euler(verticalRotation, 0, -horizontalRotation);
+                }
+                else
+                {
+                    rotateTo = Quaternion.Euler(-verticalRotation, 0, horizontalRotation);
+                }
+                wasRotating = true;
+            }
+            else
+            {
+                if(wasRotating)
+                {
+                    if(previousCameraPositionIndex == 3)
+                    {
+                        float temp = horizontalRotation;
+                        horizontalRotation = -verticalRotation;
+                        verticalRotation = temp;
+                    }
+                    else
+                    {
+                        float temp = horizontalRotation;
+                        horizontalRotation = verticalRotation;
+                        verticalRotation = -temp;
+                    }
+                    wasRotating = false;
+                }
+                rotateTo = Quaternion.Euler(-horizontalRotation, 0, -verticalRotation);
+            }
         }
-        else if (cameraPositionIndex == 3)
+        else if(cameraPositionIndex == 3)
         {
-            rotateTo = Quaternion.Euler(verticalRotation, 0, -horizontalRotation);
+            if(cameraRotating)
+            {
+                if (previousCameraPositionIndex == 0)
+                {
+                    rotateTo = Quaternion.Euler(horizontalRotation, 0, verticalRotation);
+                }
+                else
+                {
+                    rotateTo = Quaternion.Euler(-horizontalRotation, 0, -verticalRotation);
+                }
+                wasRotating = true;
+            }
+            else
+            {
+                if(wasRotating)
+                {
+                    if(previousCameraPositionIndex == 0)
+                    {
+                        float temp = horizontalRotation;
+                        horizontalRotation = -verticalRotation;
+                        verticalRotation = temp;
+                    }
+                    else
+                    {
+                        float temp = horizontalRotation;
+                        horizontalRotation = verticalRotation;
+                        verticalRotation = -temp;
+                    }
+                    wasRotating = false;
+                }
+                rotateTo = Quaternion.Euler(verticalRotation, 0, -horizontalRotation);
+            }
         }
 
         transform.rotation = Quaternion.Lerp(currentRotation, rotateTo, Time.deltaTime * Rotation_Smoothness);
