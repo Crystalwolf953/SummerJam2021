@@ -159,8 +159,8 @@ MonoBehaviour:
   Rotation_Speed: 1
   Rotation_Friction: 1
   Rotation_Smoothness: 2
-  horizontalRotationRestrict: 30
-  verticalRotationRestrict: 30
+  horizontalRotationRestrictAngle: 30
+  verticalRotationRestrictAngle: 30
 --- !u!65 &302520173
 BoxCollider:
   m_ObjectHideFlags: 0
