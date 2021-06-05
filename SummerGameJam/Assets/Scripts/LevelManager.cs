@@ -47,22 +47,20 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    private System.Collections.IEnumerator AnimateRotationTowards(Transform target, Quaternion rot, float dur)
+    private IEnumerator AnimateRotationTowards(Transform target, Quaternion rotateTo, float timeTaken)
     {
-        float t = 0f;
         Quaternion start = target.rotation;
         Vector3 from = ball.transform.position;
         Vector3 to;
-        while (t < dur)
+        for(float t = 0f; t < timeTaken; t += (Time.deltaTime / timeTaken))
         {
             to = plate1.gameObject.transform.position;
-            target.rotation = Quaternion.Slerp(start, rot, t / dur);
-            ball.transform.position = Vector3.Lerp(from, new Vector3(to.x, to.y + 0.5f, to.z), t / dur);
+            target.rotation = Quaternion.Slerp(start, rotateTo, t);
+            ball.transform.position = Vector3.Lerp(from, new Vector3(to.x, to.y + 0.5f, to.z), t);
             yield return null;
-            t += Time.deltaTime;
         }
 
-        target.rotation = rot;
+        target.rotation = rotateTo;
 
         ball.GetComponent<Rigidbody>().isKinematic = true;
         ball.transform.SetParent(mainObject.transform);

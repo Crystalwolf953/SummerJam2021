@@ -38,11 +38,11 @@ public class CameraController : MonoBehaviour
         }
     }
 
-    IEnumerator RotateMe(Vector3 rotateBy, float inTime)
+    IEnumerator RotateMe(Vector3 rotateBy, float timeTaken)
     {
         currentRotation = transform.rotation;
         rotateTo = Quaternion.Euler(transform.eulerAngles + rotateBy);
-        for (var t = 0f; t <= 1; t += Time.deltaTime / inTime)
+        for (var t = 0f; t <= 1; t += Time.deltaTime / timeTaken)
         {
             transform.rotation = Quaternion.Slerp(currentRotation, rotateTo, t);
             yield return null;
