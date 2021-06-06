@@ -26,6 +26,7 @@ public class LevelManager : MonoBehaviour
     public Rotation rotation;
     public Plate plate1;
     private bool hasActivated;
+    public enum Color {Red, Blue, Yellow, Green};
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +37,7 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(plate1.activated && !hasActivated)
+        if(plate1.isActive() && !hasActivated)
         {
             hasActivated = true;
             StartCoroutine(AnimateRotationTowards(mainObject.transform, Quaternion.identity, 1f));

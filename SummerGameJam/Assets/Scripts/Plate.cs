@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Plate : MonoBehaviour
 {
-    public bool activated;
+    public Trigger trigger;
 
     // Start is called before the first frame update
     void Start()
@@ -20,9 +20,10 @@ public class Plate : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if(other.tag == "Ball")
+        BallController ball = other.GetComponentInChildren<BallController>();
+        if(ball != null && trigger.ValidActivation(ball.ball))
         {
-            activated = true;
+            trigger.activated = true;
         }
     }
 
@@ -30,7 +31,12 @@ public class Plate : MonoBehaviour
     {
         if(other.tag == "Ball")
         {
-            activated = false;
+            trigger.activated = false;
         }
+    }
+
+    public bool isActive()
+    {
+        return trigger.activated;
     }
 }
