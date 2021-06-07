@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -20,6 +21,10 @@ public class LevelManager : MonoBehaviour
     }
 
     #endregion
+
+    // For transitioning between scenes
+    public Animator transition;
+    public float transitionTime = 1f;
 
     public GameObject mainObject;
     public List<GameObject> balls;
@@ -55,7 +60,6 @@ public class LevelManager : MonoBehaviour
 
         if (allActive && !hasActivated)
         {
-            hasActivated = true;
             StartCoroutine(AnimateRotationTowards(mainObject.transform, Quaternion.identity, 1f));
         }
 
@@ -67,7 +71,8 @@ public class LevelManager : MonoBehaviour
             {
                 plate.trigger.activated = false;
             }
-            
+
+            StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
         }
     }
 
@@ -108,5 +113,15 @@ public class LevelManager : MonoBehaviour
             ball.transform.SetParent(mainObject.transform);
         }
         rotation.ResetCurrentRotation();
+        hasActivated = true;
+    }
+
+    private IEnumerator LoadLevel(int levelIndex)
+    {
+        transition.SetTrigger("Start");
+
+        yield return new WaitForSeconds(transitionTime);
+
+        SceneManager.LoadScene(levelIndex);
     }
 }
