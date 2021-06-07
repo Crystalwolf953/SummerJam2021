@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class BallController : MonoBehaviour
 {
-    public Ball ball;
+    public LevelManager.Color color;
+    public bool charged;
     private Rigidbody rigidBody;
     public AudioSource rollingBall;
 
@@ -32,5 +33,19 @@ public class BallController : MonoBehaviour
         {
             rollingBall.Pause();
         }
+    }
+
+    public void ChangeChargeColor(LevelManager.Color color)
+    {
+        if(!charged)
+        {
+            charged = true;
+        }
+        this.color = color;
+    }
+
+    public void Decharge()
+    {
+        this.color = LevelManager.Color.Neutral;
     }
 }

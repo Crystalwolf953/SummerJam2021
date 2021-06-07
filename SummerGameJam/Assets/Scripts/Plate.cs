@@ -23,7 +23,7 @@ public class Plate : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         BallController ball = other.GetComponentInChildren<BallController>();
-        if(ball != null && trigger.ValidActivation(ball.ball))
+        if(ball != null && trigger.ValidActivation(ball))
         {
             trigger.activated = true;
             activatingBall = ball.gameObject;

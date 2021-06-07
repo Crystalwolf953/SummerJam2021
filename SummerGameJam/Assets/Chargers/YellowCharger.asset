@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63353c33d615e9243ae054bc25c89606, type: 3}
-  m_Name: YellowBall
+  m_Script: {fileID: 11500000, guid: 87ff40133b125c649b8b259a90974d61, type: 3}
+  m_Name: YellowCharger
   m_EditorClassIdentifier: 
-  colorType: 2
-  charged: 1
+  color: 3

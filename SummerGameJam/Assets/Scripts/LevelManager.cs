@@ -32,7 +32,7 @@ public class LevelManager : MonoBehaviour
     public List<Plate> plates;
     private bool hasActivated;
     public bool allActive;
-    public enum Color {Red, Blue, Yellow, Green};
+    public enum Color {Neutral, Red, Blue, Yellow, Green};
 
     // Start is called before the first frame update
     void Start()

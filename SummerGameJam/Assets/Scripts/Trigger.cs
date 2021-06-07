@@ -4,10 +4,11 @@ using UnityEngine;
 public class Trigger : ScriptableObject
 {
     public bool activated;
+    public bool holeTrigger;
     public LevelManager.Color colorType;
 
-    public virtual bool ValidActivation(Ball other)
+    public virtual bool ValidActivation(BallController other)
     {
-        return (this.colorType == other.colorType) && other.charged;
+        return (this.colorType == other.color) && other.charged;
     }
 }
