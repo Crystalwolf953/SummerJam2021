@@ -22,10 +22,11 @@ public class LevelManager : MonoBehaviour
     #endregion
 
     public GameObject mainObject;
-    public GameObject ball;
+    public List<GameObject> balls;
     public Rotation rotation;
-    public Plate plate1;
+    public List<Plate> plates;
     private bool hasActivated;
+    public bool allActive;
     public enum Color {Red, Blue, Yellow, Green};
 
     // Start is called before the first frame update
@@ -37,34 +38,75 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(plate1.isActive() && !hasActivated)
+        bool active = true;
+
+        foreach(Plate plate in plates)
+        { 
+            if (!plate.isActive())
+            {
+                active = false;
+            }
+        }
+
+        if(active)
+        {
+            allActive = true;
+        }
+
+        if (allActive && !hasActivated)
         {
             hasActivated = true;
             StartCoroutine(AnimateRotationTowards(mainObject.transform, Quaternion.identity, 1f));
         }
-        if(hasActivated)
+
+        if (hasActivated)
         {
             mainObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+            
+            foreach(Plate plate in plates)
+            {
+                plate.trigger.activated = false;
+            }
+            
         }
     }
 
     private IEnumerator AnimateRotationTowards(Transform target, Quaternion rotateTo, float timeTaken)
     {
         Quaternion start = target.rotation;
-        Vector3 from = ball.transform.position;
-        Vector3 to;
-        for(float t = 0f; t < timeTaken; t += (Time.deltaTime / timeTaken))
+
+        List<Vector3> from = new List<Vector3>();
+        
+        for(int i = 0; i < balls.Count; i++)
         {
-            to = plate1.gameObject.transform.position;
+            from.Add(plates[i].activatingBall.transform.position);
+        }
+
+        Vector3[] to = new Vector3[balls.Count];
+
+        for (float t = 0f; t < timeTaken; t += (Time.deltaTime / timeTaken))
+        {
+            for(int i = 0; i < balls.Count; i++ )
+            {
+                to[i] = plates[i].gameObject.transform.position;
+            }
+
             target.rotation = Quaternion.Slerp(start, rotateTo, t);
-            ball.transform.position = Vector3.Lerp(from, new Vector3(to.x, to.y + 0.5f, to.z), t);
+
+            for(int i = 0; i < balls.Count; i++)
+            {
+                balls[i].transform.position = Vector3.Lerp(from[i], new Vector3(to[i].x, to[i].y + 0.5f, to[i].z), t);
+            }
             yield return null;
         }
 
         target.rotation = rotateTo;
 
-        ball.GetComponent<Rigidbody>().isKinematic = true;
-        ball.transform.SetParent(mainObject.transform);
+        foreach(GameObject ball in balls)
+        {
+            ball.GetComponent<Rigidbody>().isKinematic = true;
+            ball.transform.SetParent(mainObject.transform);
+        }
         rotation.ResetCurrentRotation();
     }
 }

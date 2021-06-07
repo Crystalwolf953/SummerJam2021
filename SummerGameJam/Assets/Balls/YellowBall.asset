@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: YellowBall
   m_EditorClassIdentifier: 
   colorType: 2
+  charged: 1

@@ -8,6 +8,6 @@ public class Trigger : ScriptableObject
 
     public virtual bool ValidActivation(Ball other)
     {
-        return this.colorType == other.colorType;
+        return (this.colorType == other.colorType) && other.charged;
     }
 }

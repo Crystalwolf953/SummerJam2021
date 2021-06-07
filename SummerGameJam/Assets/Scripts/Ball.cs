@@ -4,4 +4,5 @@ using UnityEngine;
 public class Ball : ScriptableObject
 {
     public LevelManager.Color colorType;
+    public bool charged;
 }

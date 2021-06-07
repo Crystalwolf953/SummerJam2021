@@ -5,6 +5,8 @@ using UnityEngine;
 public class Plate : MonoBehaviour
 {
     public Trigger trigger;
+    public GameObject activatingBall = null;
+    public Vector3 ballPosition;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +26,7 @@ public class Plate : MonoBehaviour
         if(ball != null && trigger.ValidActivation(ball.ball))
         {
             trigger.activated = true;
+            activatingBall = ball.gameObject;
         }
     }
 
