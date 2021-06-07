@@ -1294,7 +1294,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5268468706400123602, guid: b97bec5ac7eade2419095a6cf3f0d3a6, type: 3}
       propertyPath: color
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5268468706400123602, guid: b97bec5ac7eade2419095a6cf3f0d3a6, type: 3}
       propertyPath: charged

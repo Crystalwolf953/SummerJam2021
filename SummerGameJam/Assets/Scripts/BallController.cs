@@ -21,6 +21,29 @@ public class BallController : MonoBehaviour
     void Update()
     {
         rollingBall.pitch = Mathf.Clamp(rigidBody.velocity.magnitude, 0.1f, 1.0f);
+        if(color == LevelManager.Color.Neutral)
+        {
+            charged = false;
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        BallController ball = collision.gameObject.GetComponent<BallController>();
+        
+        if(ball != null)
+        {
+            if(!ball.charged)
+            {
+                ball.charged = charged;
+                ball.color = color;
+            }
+            else if(charged)
+            {
+                // do something if both are charged
+            }
+        }
+        
     }
 
     private void OnCollisionStay(Collision collision)
