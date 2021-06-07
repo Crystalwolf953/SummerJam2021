@@ -35,11 +35,12 @@ public class Plate : MonoBehaviour
         if(other.tag == "Ball")
         {
             trigger.activated = false;
+            activatingBall = null;
         }
     }
 
     public bool isActive()
     {
-        return trigger.activated;
+        return trigger.activated && activatingBall != null;
     }
 }
