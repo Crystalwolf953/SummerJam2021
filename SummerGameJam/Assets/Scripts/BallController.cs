@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Audio;
 using UnityEngine;
+using DigitalRuby.LightningBolt;
 
 public class BallController : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class BallController : MonoBehaviour
     public bool charged;
     private Rigidbody rigidBody;
     public AudioSource rollingBall;
+    public LightningBoltScript lightning;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +26,10 @@ public class BallController : MonoBehaviour
         if(color == LevelManager.Color.Neutral)
         {
             charged = false;
+        }
+        if(charged)
+        {
+            lightning.Trigger();
         }
     }
 
