@@ -37,6 +37,7 @@ public class LevelManager : MonoBehaviour
     public bool allFlatPlatesActive;
 
     public AudioSource levelClear;
+    public Light levelLight;
 
     public enum Color {Neutral, Red, Blue, Yellow, Green, Purple, Orange};
 
@@ -93,6 +94,7 @@ public class LevelManager : MonoBehaviour
 
         if (allActive && !hasActivated)
         {
+            levelLight.color = new UnityEngine.Color(0f, .75f, 1f);
             StartCoroutine(AnimateRotationTowards(mainObject.transform, Quaternion.identity, 1f));
         }
 

@@ -765,6 +765,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1349977434}
     - target: {fileID: 3134423399577511567, guid: ab2ee7c14163dc2468b4d3e0a5bdb1fe, type: 3}
+      propertyPath: levelLight
+      value: 
+      objectReference: {fileID: 1900844200}
+    - target: {fileID: 3134423399577511567, guid: ab2ee7c14163dc2468b4d3e0a5bdb1fe, type: 3}
       propertyPath: mainObject
       value: 
       objectReference: {fileID: 225094627}
@@ -1599,7 +1603,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 8.74, y: 10.37}
   m_BounceIntensity: 1
