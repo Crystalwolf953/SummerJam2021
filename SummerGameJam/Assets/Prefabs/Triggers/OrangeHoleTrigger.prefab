@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4514716586162170286
+--- !u!1 &2374105867631903860
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4514716586162170287}
-  - component: {fileID: 4514716586162170289}
-  - component: {fileID: 4514716586162170288}
+  - component: {fileID: 2374105867631903861}
+  - component: {fileID: 2374105867631903851}
+  - component: {fileID: 2374105867631903850}
   m_Layer: 0
   m_Name: ColliderDetector
   m_TagString: Untagged
@@ -18,47 +18,47 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4514716586162170287
+--- !u!4 &2374105867631903861
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4514716586162170286}
+  m_GameObject: {fileID: 2374105867631903860}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6896795944616095122}
+  m_Father: {fileID: 4747828901222154312}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &4514716586162170289
+--- !u!135 &2374105867631903851
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4514716586162170286}
+  m_GameObject: {fileID: 2374105867631903860}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.4
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &4514716586162170288
+--- !u!114 &2374105867631903850
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4514716586162170286}
+  m_GameObject: {fileID: 2374105867631903860}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7457e6d2c14c047408c9d8a7be597eb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plate: {fileID: 6896795944616095126}
---- !u!1 &6896795944616095133
+  plate: {fileID: 4747828901222154316}
+--- !u!1 &4747828901222154311
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -66,48 +66,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6896795944616095122}
-  - component: {fileID: 6896795944616095121}
-  - component: {fileID: 6896795944616095120}
-  - component: {fileID: 6896795944616095123}
-  - component: {fileID: 6896795944616095126}
+  - component: {fileID: 4747828901222154312}
+  - component: {fileID: 4747828901222154315}
+  - component: {fileID: 4747828901222154314}
+  - component: {fileID: 4747828901222154313}
+  - component: {fileID: 4747828901222154316}
   m_Layer: 0
-  m_Name: YellowHoleTrigger
+  m_Name: OrangeHoleTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6896795944616095122
+--- !u!4 &4747828901222154312
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6896795944616095133}
+  m_GameObject: {fileID: 4747828901222154311}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.614, z: 0}
   m_LocalScale: {x: 1, y: 0.01, z: 1}
   m_Children:
-  - {fileID: 4514716586162170287}
+  - {fileID: 2374105867631903861}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &6896795944616095121
+--- !u!33 &4747828901222154315
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6896795944616095133}
+  m_GameObject: {fileID: 4747828901222154311}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &6896795944616095120
+--- !u!23 &4747828901222154314
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6896795944616095133}
+  m_GameObject: {fileID: 4747828901222154311}
   m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -142,32 +142,36 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &6896795944616095123
+--- !u!136 &4747828901222154313
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6896795944616095133}
+  m_GameObject: {fileID: 4747828901222154311}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.35
   m_Height: 50
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0.000017881393, z: -0.00000011920929}
---- !u!114 &6896795944616095126
+--- !u!114 &4747828901222154316
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6896795944616095133}
+  m_GameObject: {fileID: 4747828901222154311}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10336c98c28dc8249a28048f2d33cb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 11400000, guid: 01b3b4b0a078fa145b69ed73d2c11f38, type: 2}
+  activated: 0
+  holeTrigger: 1
+  colorType: 6
   activatingBall: {fileID: 0}
   ballPosition: {x: 0, y: 0, z: 0}
+  generator: {fileID: 0}
+  chargedGenerator: 0

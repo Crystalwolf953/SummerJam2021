@@ -5,8 +5,8 @@ using DigitalRuby.LightningBolt;
 
 public class ChargerController : MonoBehaviour
 {
-    public Charger charger;
     public LightningBoltScript lightning;
+    public LevelManager.Color color;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +26,12 @@ public class ChargerController : MonoBehaviour
         if (ball != null)
         {
             lightning.Trigger();
-            charger.Charge(ball);
+            Charge(ball);
         }
+    }
+
+    public void Charge(BallController ball)
+    {
+        ball.ChangeChargeColor(color);
     }
 }

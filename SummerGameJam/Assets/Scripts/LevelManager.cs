@@ -30,11 +30,13 @@ public class LevelManager : MonoBehaviour
     public GameObject mainObject;
     public List<GameObject> balls;
     public Rotation rotation;
-    public List<Plate> plates;
+    public List<Plate> HolePlates;
+    public List<Plate> FlatPlates;
     private bool hasActivated;
     public bool allActive;
+    public bool allFlatPlatesActive;
 
-    public enum Color {Neutral, Red, Blue, Yellow, Green};
+    public enum Color {Neutral, Red, Blue, Yellow, Green, Purple, Orange};
 
     // Start is called before the first frame update
     void Start()
@@ -47,15 +49,37 @@ public class LevelManager : MonoBehaviour
     {
         bool active = true;
 
-        foreach(Plate plate in plates)
-        { 
-            if (!plate.isActive())
+        if(HolePlates.Count > 0)
+        {
+            foreach(Plate plate in HolePlates)
             {
-                active = false;
+                if(!plate.isActive())
+                {
+                    active = false;
+                }
             }
         }
 
-        if(active)
+        bool flatPlatesActive = true;
+
+        if(FlatPlates.Count > 0)
+        {
+            foreach(Plate plate in FlatPlates)
+            {
+                if(!plate.isActive())
+                {
+                    flatPlatesActive = false;
+                    active = false;
+                }
+            }
+        }
+
+        if(flatPlatesActive)
+        {
+            allFlatPlatesActive = true;
+        }
+
+        if (active)
         {
             allActive = true;
         }
@@ -65,13 +89,17 @@ public class LevelManager : MonoBehaviour
             StartCoroutine(AnimateRotationTowards(mainObject.transform, Quaternion.identity, 1f));
         }
 
-        if (hasActivated)
+        if(hasActivated)
         {
             mainObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
             
-            foreach(Plate plate in plates)
+            foreach(Plate plate in HolePlates)
             {
-                plate.trigger.activated = false;
+                plate.activated = false;
+            }
+            foreach (Plate plate in FlatPlates)
+            {
+                plate.activated = false;
             }
 
             StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
@@ -86,7 +114,7 @@ public class LevelManager : MonoBehaviour
         
         for(int i = 0; i < balls.Count; i++)
         {
-            from.Add(plates[i].activatingBall.transform.position);
+            from.Add(HolePlates[i].activatingBall.transform.position);
         }
 
         Vector3[] to = new Vector3[balls.Count];
@@ -95,7 +123,7 @@ public class LevelManager : MonoBehaviour
         {
             for(int i = 0; i < balls.Count; i++ )
             {
-                to[i] = plates[i].gameObject.transform.position;
+                to[i] = HolePlates[i].gameObject.transform.position;
             }
 
             target.rotation = Quaternion.Slerp(start, rotateTo, t);

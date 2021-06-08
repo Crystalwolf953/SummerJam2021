@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class Plate : MonoBehaviour
 {
-    public Trigger trigger;
+    public bool activated;
+    public bool holeTrigger;
+    public LevelManager.Color colorType;
+
     public GameObject activatingBall = null;
     public Vector3 ballPosition;
+
+    public GameObject generator;
+    public bool chargedGenerator;
 
     // Start is called before the first frame update
     void Start()
@@ -23,24 +29,65 @@ public class Plate : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         BallController ball = other.GetComponentInChildren<BallController>();
-        if(ball != null && trigger.ValidActivation(ball))
+        if(ball != null && ValidActivation(ball))
         {
-            trigger.activated = true;
-            activatingBall = ball.gameObject;
+            activated = true;
+            if(holeTrigger)
+            {
+                activatingBall = ball.gameObject;
+            }
+            else
+            {
+                if(generator.GetComponent<ReceiverController>().ChangeColor(ball.color))
+                {
+                    chargedGenerator = true;
+                }
+                if(chargedGenerator)
+                {
+                    generator.GetComponent<ReceiverController>().TriggerLightning();
+                }
+            }
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.tag == "Ball")
+        if(other.tag == "Ball" && holeTrigger)
         {
-            trigger.activated = false;
+            activated = false;
             activatingBall = null;
+        }
+        if(chargedGenerator)
+        {
+            chargedGenerator = false;
+            BallController ball = other.GetComponentInChildren<BallController>();
+            ball.Decharge();
         }
     }
 
     public bool isActive()
     {
-        return trigger.activated && activatingBall != null;
+        if(holeTrigger)
+        {
+            return activated && activatingBall != null;
+        }
+        else
+        {
+            return activated;
+        }
+    }
+
+    public bool ValidActivation(BallController other)
+    {
+        if (holeTrigger)
+        {
+            return (this.colorType == other.color) && other.charged;
+        }
+        else
+        {
+            return other.charged;
+        }
     }
 }
+
+

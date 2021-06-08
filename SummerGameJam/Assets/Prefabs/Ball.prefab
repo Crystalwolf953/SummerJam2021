@@ -134,6 +134,8 @@ MonoBehaviour:
   redMaterial: {fileID: 2100000, guid: 836178f82d70e1d49b745c428de80c65, type: 2}
   blueMaterial: {fileID: 2100000, guid: 1917603c1807ef24682725427a9d59bc, type: 2}
   greenMaterial: {fileID: 2100000, guid: 757faf0ee8fb9a241bd97644399c2592, type: 2}
+  orangeMaterial: {fileID: 2100000, guid: aab0cf64768e97642b96617e4d21d4c3, type: 2}
+  purpleMaterial: {fileID: 2100000, guid: 3bd4c38d5f8d16b46921fbfb1acd4e14, type: 2}
 --- !u!82 &5804695273911527509
 AudioSource:
   m_ObjectHideFlags: 0

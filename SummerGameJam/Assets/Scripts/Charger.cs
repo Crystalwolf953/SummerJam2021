@@ -6,10 +6,7 @@ using DigitalRuby.LightningBolt;
 [CreateAssetMenu(fileName = "New Charger", menuName = "Charger")]
 public class Charger : ScriptableObject
 {
-    public LevelManager.Color color;
     
-    public void Charge(BallController ball)
-    {
-        ball.ChangeChargeColor(color);
-    }
+    
+    
 }

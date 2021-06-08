@@ -17,6 +17,8 @@ public class BallController : MonoBehaviour
     public Material redMaterial;
     public Material blueMaterial;
     public Material greenMaterial;
+    public Material orangeMaterial;
+    public Material purpleMaterial;
 
 
     // Start is called before the first frame update
