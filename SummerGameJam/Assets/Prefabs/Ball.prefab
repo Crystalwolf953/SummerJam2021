@@ -129,7 +129,8 @@ MonoBehaviour:
   color: 0
   charged: 0
   rollingBall: {fileID: 5804695273911527509}
-  lightning: {fileID: 0}
+  neutralMaterial: {fileID: 2100000, guid: 3b6a6e30209f0c04aa080c673990d9a2, type: 2}
+  yellowMaterial: {fileID: 2100000, guid: 559ce37534590524d93009993583652e, type: 2}
 --- !u!82 &5804695273911527509
 AudioSource:
   m_ObjectHideFlags: 0

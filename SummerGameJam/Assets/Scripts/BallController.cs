@@ -11,9 +11,15 @@ public class BallController : MonoBehaviour
     private Rigidbody rigidBody;
     public AudioSource rollingBall;
 
+    private Renderer ballRenderer;
+    public Material neutralMaterial;
+    public Material yellowMaterial;
+    
+
     // Start is called before the first frame update
     void Start()
     {
+        ballRenderer = GetComponent<Renderer>();
         rollingBall = GetComponent<AudioSource>();
         rigidBody = GetComponent<Rigidbody>();
     }
@@ -70,10 +76,15 @@ public class BallController : MonoBehaviour
             charged = true;
         }
         this.color = color;
+        if(color == LevelManager.Color.Yellow)
+        {
+            ballRenderer.material = yellowMaterial;
+        }
     }
 
     public void Decharge()
     {
         this.color = LevelManager.Color.Neutral;
+        ballRenderer.material = neutralMaterial;
     }
 }
