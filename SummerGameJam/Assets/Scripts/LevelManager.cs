@@ -36,6 +36,8 @@ public class LevelManager : MonoBehaviour
     public bool allActive;
     public bool allFlatPlatesActive;
 
+    public AudioSource levelClear;
+
     public enum Color {Neutral, Red, Blue, Yellow, Green, Purple, Orange};
 
     // Start is called before the first frame update
@@ -107,7 +109,7 @@ public class LevelManager : MonoBehaviour
                 plate.activated = false;
             }
 
-            StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+            StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1, false));
         }
     }
 
@@ -151,9 +153,14 @@ public class LevelManager : MonoBehaviour
         hasActivated = true;
     }
 
-    private IEnumerator LoadLevel(int levelIndex)
+    private IEnumerator LoadLevel(int levelIndex, bool restart)
     {
         transition.SetTrigger("Start");
+
+        if(!restart && !levelClear.isPlaying)
+        {
+            levelClear.Play();
+        }
 
         yield return new WaitForSeconds(transitionTime);
 
@@ -162,6 +169,6 @@ public class LevelManager : MonoBehaviour
 
     public void Restart()
     {
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex));
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex, true));
     }
 }
