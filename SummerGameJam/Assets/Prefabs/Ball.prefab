@@ -131,6 +131,9 @@ MonoBehaviour:
   rollingBall: {fileID: 5804695273911527509}
   neutralMaterial: {fileID: 2100000, guid: 3b6a6e30209f0c04aa080c673990d9a2, type: 2}
   yellowMaterial: {fileID: 2100000, guid: 559ce37534590524d93009993583652e, type: 2}
+  redMaterial: {fileID: 2100000, guid: 836178f82d70e1d49b745c428de80c65, type: 2}
+  blueMaterial: {fileID: 2100000, guid: 1917603c1807ef24682725427a9d59bc, type: 2}
+  greenMaterial: {fileID: 2100000, guid: 757faf0ee8fb9a241bd97644399c2592, type: 2}
 --- !u!82 &5804695273911527509
 AudioSource:
   m_ObjectHideFlags: 0
