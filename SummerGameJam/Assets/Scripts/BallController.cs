@@ -10,6 +10,7 @@ public class BallController : MonoBehaviour
     public bool charged;
     private Rigidbody rigidBody;
     public AudioSource rollingBall;
+    private Light ballLight;
 
     private Renderer ballRenderer;
     public Material neutralMaterial;
@@ -27,6 +28,7 @@ public class BallController : MonoBehaviour
         ballRenderer = GetComponent<Renderer>();
         rollingBall = GetComponent<AudioSource>();
         rigidBody = GetComponent<Rigidbody>();
+        ballLight = GetComponent<Light>();
     }
 
     // Update is called once per frame
@@ -130,19 +132,33 @@ public class BallController : MonoBehaviour
 
         if(color == LevelManager.Color.Yellow)
         {
+            ballLight.color = Color.yellow;
             ballRenderer.material = yellowMaterial;
         }
         else if(color == LevelManager.Color.Red)
         {
+            ballLight.color = Color.red;
             ballRenderer.material = redMaterial;
         }
         else if(color == LevelManager.Color.Blue)
         {
+            ballLight.color = Color.blue;
             ballRenderer.material = blueMaterial;
         }
         else if(color == LevelManager.Color.Green)
         {
+            ballLight.color = Color.green;
             ballRenderer.material = greenMaterial;
+        }
+        else if(color == LevelManager.Color.Purple)
+        {
+            ballLight.color = new Color(1f, 0f, 1f);
+            ballRenderer.material = purpleMaterial;
+        }
+        else if(color == LevelManager.Color.Orange)
+        {
+            ballLight.color = new Color(1f, 0.5f, 1f);
+            ballRenderer.material = orangeMaterial;
         }
     }
 

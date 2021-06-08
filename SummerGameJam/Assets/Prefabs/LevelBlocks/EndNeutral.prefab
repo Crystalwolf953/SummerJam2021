@@ -325,6 +325,7 @@ GameObject:
   - component: {fileID: 6171669572579230517}
   - component: {fileID: 5058845883957481884}
   - component: {fileID: 8468786442879237266}
+  - component: {fileID: 1204010005166485907}
   m_Layer: 0
   m_Name: Sphere.004
   m_TagString: Untagged
@@ -395,6 +396,68 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!108 &1204010005166485907
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5362680971148266779}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 0.972549, g: 0.89405674, b: 0.18823528, a: 1}
+  m_Intensity: 1.16
+  m_Range: 4.96
+  m_SpotAngle: 1
+  m_InnerSpotAngle: 1
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 1
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &7345800908016644546
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,11 +781,6 @@ PrefabInstance:
       objectReference: {fileID: 8407140416590991027}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52f8062d624b08e448e64a3b0c8f35ac, type: 3}
---- !u!4 &5938067892577119618 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5842657353693861575, guid: 52f8062d624b08e448e64a3b0c8f35ac, type: 3}
-  m_PrefabInstance: {fileID: 251366642624838469}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5938067892584003464 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5842657353699560653, guid: 52f8062d624b08e448e64a3b0c8f35ac, type: 3}
@@ -734,6 +792,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1091a5ee196fdf42a874591bbee767d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &5938067892577119618 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5842657353693861575, guid: 52f8062d624b08e448e64a3b0c8f35ac, type: 3}
+  m_PrefabInstance: {fileID: 251366642624838469}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &251366642975616689
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -961,11 +1024,6 @@ PrefabInstance:
       objectReference: {fileID: 8407140416590991027}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d61dba18827d83d44be78923675686b2, type: 3}
---- !u!4 &8807914820339288777 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8738944246026915276, guid: d61dba18827d83d44be78923675686b2, type: 3}
-  m_PrefabInstance: {fileID: 251366643770853125}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &8807914820345123011 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8738944246033799110, guid: d61dba18827d83d44be78923675686b2, type: 3}
@@ -977,6 +1035,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1091a5ee196fdf42a874591bbee767d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &8807914820339288777 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8738944246026915276, guid: d61dba18827d83d44be78923675686b2, type: 3}
+  m_PrefabInstance: {fileID: 251366643770853125}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7924274581203228104
 PrefabInstance:
   m_ObjectHideFlags: 0
