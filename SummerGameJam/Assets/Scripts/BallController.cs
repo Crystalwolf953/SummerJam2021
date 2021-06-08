@@ -14,7 +14,10 @@ public class BallController : MonoBehaviour
     private Renderer ballRenderer;
     public Material neutralMaterial;
     public Material yellowMaterial;
-    
+    public Material redMaterial;
+    public Material blueMaterial;
+    public Material greenMaterial;
+
 
     // Start is called before the first frame update
     void Start()
@@ -75,15 +78,30 @@ public class BallController : MonoBehaviour
         {
             charged = true;
         }
+
         this.color = color;
+
         if(color == LevelManager.Color.Yellow)
         {
             ballRenderer.material = yellowMaterial;
+        }
+        else if(color == LevelManager.Color.Red)
+        {
+            ballRenderer.material = redMaterial;
+        }
+        else if(color == LevelManager.Color.Blue)
+        {
+            ballRenderer.material = blueMaterial;
+        }
+        else if(color == LevelManager.Color.Green)
+        {
+            ballRenderer.material = greenMaterial;
         }
     }
 
     public void Decharge()
     {
+        charged = false;
         this.color = LevelManager.Color.Neutral;
         ballRenderer.material = neutralMaterial;
     }
