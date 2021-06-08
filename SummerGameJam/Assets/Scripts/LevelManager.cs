@@ -34,7 +34,6 @@ public class LevelManager : MonoBehaviour
     private bool hasActivated;
     public bool allActive;
 
-    public GameObject yellowBallLightning;
     public enum Color {Neutral, Red, Blue, Yellow, Green};
 
     // Start is called before the first frame update
