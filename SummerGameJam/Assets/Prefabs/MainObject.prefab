@@ -43,11 +43,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 151df66765d3dd044b4b8073ab3de953, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rotation_Speed: 0
-  Rotation_Friction: 0
-  Rotation_Smoothness: 0
-  horizontalRotationRestrictAngle: 0
-  verticalRotationRestrictAngle: 0
+  Rotation_Speed: 1
+  Rotation_Friction: 1
+  Rotation_Smoothness: 0.75
+  horizontalRotationRestrictAngle: 25
+  verticalRotationRestrictAngle: 25
   cameraController: {fileID: 0}
   cameraRotating: 0
   wasRotating: 0
