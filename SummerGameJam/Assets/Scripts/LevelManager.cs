@@ -47,6 +47,11 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetAxis("RestartLevel") > 0f)
+        {
+            Restart();
+        }
+
         bool active = true;
 
         if(HolePlates.Count > 0)
@@ -153,5 +158,10 @@ public class LevelManager : MonoBehaviour
         yield return new WaitForSeconds(transitionTime);
 
         SceneManager.LoadScene(levelIndex);
+    }
+
+    public void Restart()
+    {
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex));
     }
 }

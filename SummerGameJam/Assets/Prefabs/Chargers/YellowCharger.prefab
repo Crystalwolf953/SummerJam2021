@@ -109,4 +109,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfc9391871a8bff409ce92cfad279c6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  charger: {fileID: 11400000, guid: d9c31ce27fd846c4495c23150739296c, type: 2}
+  lightning: {fileID: 0}
+  color: 3
