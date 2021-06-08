@@ -10,7 +10,6 @@ public class BallController : MonoBehaviour
     public bool charged;
     private Rigidbody rigidBody;
     public AudioSource rollingBall;
-    public LightningBoltScript lightning;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +28,7 @@ public class BallController : MonoBehaviour
         }
         if(charged)
         {
-            lightning.Trigger();
+
         }
     }
 

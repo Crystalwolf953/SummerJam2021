@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using DigitalRuby.LightningBolt;
 
 public class LevelManager : MonoBehaviour
 {
@@ -32,6 +33,8 @@ public class LevelManager : MonoBehaviour
     public List<Plate> plates;
     private bool hasActivated;
     public bool allActive;
+
+    public GameObject yellowBallLightning;
     public enum Color {Neutral, Red, Blue, Yellow, Green};
 
     // Start is called before the first frame update

@@ -22,7 +22,6 @@ public class ChargerController : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log("Here");
         BallController ball = other.GetComponentInChildren<BallController>();
         if (ball != null)
         {
