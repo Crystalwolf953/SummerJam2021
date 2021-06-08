@@ -43,33 +43,79 @@ public class BallController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        BallController ball = collision.gameObject.GetComponent<BallController>();
-        
-        if(ball != null)
-        {
-            if(!ball.charged)
-            {
-                ball.ChangeChargeColor(color);
-            }
-            else if(charged)
-            {
-                // do something if both are charged
-            }
-        }
-        
-    }
-
     private void OnCollisionStay(Collision collision)
     {
-        if(rigidBody.velocity.magnitude >= 0.2f && !rollingBall.isPlaying)
+        if (rigidBody.velocity.magnitude >= 0.2f && !rollingBall.isPlaying)
         {
             rollingBall.Play();
         }
         else if (rigidBody.velocity.magnitude < 0.2f && rollingBall.isPlaying)
         {
             rollingBall.Pause();
+        }
+
+        BallController ball = collision.gameObject.GetComponent<BallController>();
+
+        if (ball != null)
+        {
+            if (!ball.charged)
+            {
+                ball.ChangeChargeColor(color);
+            }
+            else if (charged && ball.color != color)
+            {
+                if (ball.color == LevelManager.Color.Yellow)
+                {
+                    if (color == LevelManager.Color.Red)
+                    {
+                        ChangeChargeColor(LevelManager.Color.Orange);
+                        ball.ChangeChargeColor(LevelManager.Color.Orange);
+                    }
+                    else if (color == LevelManager.Color.Blue)
+                    {
+                        ChangeChargeColor(LevelManager.Color.Green);
+                        ball.ChangeChargeColor(LevelManager.Color.Green);
+                    }
+                    else
+                    {
+                        ChangeChargeColor(LevelManager.Color.Yellow);
+                    }
+                }
+                else if (ball.color == LevelManager.Color.Red)
+                {
+                    if (color == LevelManager.Color.Yellow)
+                    {
+                        ChangeChargeColor(LevelManager.Color.Orange);
+                        ball.ChangeChargeColor(LevelManager.Color.Orange);
+                    }
+                    else if (color == LevelManager.Color.Blue)
+                    {
+                        ChangeChargeColor(LevelManager.Color.Purple);
+                        ball.ChangeChargeColor(LevelManager.Color.Purple);
+                    }
+                    else
+                    {
+                        ChangeChargeColor(LevelManager.Color.Red);
+                    }
+                }
+                else if (ball.color == LevelManager.Color.Blue)
+                {
+                    if (color == LevelManager.Color.Red)
+                    {
+                        ChangeChargeColor(LevelManager.Color.Purple);
+                        ball.ChangeChargeColor(LevelManager.Color.Purple);
+                    }
+                    else if (color == LevelManager.Color.Yellow)
+                    {
+                        ChangeChargeColor(LevelManager.Color.Green);
+                        ball.ChangeChargeColor(LevelManager.Color.Green);
+                    }
+                    else
+                    {
+                        ChangeChargeColor(LevelManager.Color.Blue);
+                    }
+                }
+            }
         }
     }
 

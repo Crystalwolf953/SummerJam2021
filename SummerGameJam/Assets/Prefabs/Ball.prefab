@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5268468706400123613}
   - component: {fileID: 5268468706400123602}
   - component: {fileID: 5804695273911527509}
-  - component: {fileID: 5035900320326692931}
+  - component: {fileID: 303058322}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Ball
@@ -193,7 +193,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.5
+      value: 0.8
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -233,7 +233,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!108 &5035900320326692931
+--- !u!108 &303058322
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -284,7 +284,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1

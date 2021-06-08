@@ -8,6 +8,8 @@ public class ChargerController : MonoBehaviour
     public LightningBoltScript lightning;
     public LevelManager.Color color;
 
+    public AudioSource lightningEffect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,9 +27,18 @@ public class ChargerController : MonoBehaviour
         BallController ball = other.GetComponentInChildren<BallController>();
         if (ball != null)
         {
+            if (!lightningEffect.isPlaying)
+            {
+                lightningEffect.Play();
+            }
             lightning.Trigger();
             Charge(ball);
         }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        lightningEffect.Stop();
     }
 
     public void Charge(BallController ball)
