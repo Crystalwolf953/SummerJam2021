@@ -49,8 +49,7 @@ public class BallController : MonoBehaviour
         {
             if(!ball.charged)
             {
-                ball.charged = charged;
-                ball.color = color;
+                ball.ChangeChargeColor(color);
             }
             else if(charged)
             {

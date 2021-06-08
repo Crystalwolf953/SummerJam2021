@@ -53,6 +53,7 @@ MonoBehaviour:
   plates:
   - {fileID: 0}
   allActive: 0
+  yellowBallLightning: {fileID: 0}
 --- !u!1 &3134423399855482735
 GameObject:
   m_ObjectHideFlags: 0
