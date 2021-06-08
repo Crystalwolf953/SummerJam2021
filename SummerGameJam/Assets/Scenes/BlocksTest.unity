@@ -1367,6 +1367,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EndPowerBlock
       objectReference: {fileID: 0}
+    - target: {fileID: 1340830206398837341, guid: 6ea5f528b563de54389d60a170310d6c, type: 3}
+      propertyPath: requiredColor
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1922278352500610617, guid: 6ea5f528b563de54389d60a170310d6c, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -1416,8 +1420,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7774454810295167054, guid: 6ea5f528b563de54389d60a170310d6c, type: 3}
+      propertyPath: m_Volume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774454810295167054, guid: 6ea5f528b563de54389d60a170310d6c, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774454810295167054, guid: 6ea5f528b563de54389d60a170310d6c, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 8407140416590991032, guid: 6ea5f528b563de54389d60a170310d6c, type: 3}
       propertyPath: generator

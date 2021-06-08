@@ -29,7 +29,6 @@ public class ChargerController : MonoBehaviour
         {
             if (!lightningEffect.isPlaying)
             {
-                Debug.Log("Charger");
                 lightningEffect.Play();
             }
             lightning.Trigger();

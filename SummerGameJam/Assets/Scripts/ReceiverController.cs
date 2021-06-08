@@ -6,6 +6,8 @@ using DigitalRuby.LightningBolt;
 public class ReceiverController : MonoBehaviour
 {
     public LevelManager.Color color;
+    public LevelManager.Color requiredColor;
+
     public LightningBoltScript yellowLightning;
     public LightningBoltScript redLightning;
     public LightningBoltScript blueLightning;
@@ -75,7 +77,6 @@ public class ReceiverController : MonoBehaviour
     {
         if (!lightningEffect.isPlaying)
         {
-            Debug.Log("Receiver");
             lightningEffect.Play();
         }
 

@@ -78,7 +78,7 @@ public class Plate : MonoBehaviour
         }
         else
         {
-            return activated;
+            return activated && receiver.color == receiver.requiredColor;
         }
     }
 
