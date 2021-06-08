@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DigitalRuby.LightningBolt;
 
 public class ChargerController : MonoBehaviour
 {
     public Charger charger;
+    public LightningBoltScript lightning;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +26,7 @@ public class ChargerController : MonoBehaviour
         BallController ball = other.GetComponentInChildren<BallController>();
         if (ball != null)
         {
+            lightning.Trigger();
             charger.Charge(ball);
         }
     }
