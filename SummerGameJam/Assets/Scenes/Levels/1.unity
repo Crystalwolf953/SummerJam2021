@@ -347,6 +347,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RedHoleTrigger
       objectReference: {fileID: 0}
+    - target: {fileID: 406194929879763018, guid: b01eb31c7e2258c478be7c007d490e9c, type: 3}
+      propertyPath: lightChange
+      value: 0.001
+      objectReference: {fileID: 0}
     - target: {fileID: 406194929879763022, guid: b01eb31c7e2258c478be7c007d490e9c, type: 3}
       propertyPath: m_RootOrder
       value: 10
