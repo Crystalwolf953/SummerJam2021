@@ -13,11 +13,15 @@ public class Plate : MonoBehaviour
 
     public GameObject generator;
     public bool chargedGenerator;
+    private ReceiverController receiver;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (generator != null)
+        {
+            receiver = generator.GetComponent<ReceiverController>();
+        }
     }
 
     // Update is called once per frame
@@ -44,7 +48,7 @@ public class Plate : MonoBehaviour
                 }
                 if(chargedGenerator)
                 {
-                    generator.GetComponent<ReceiverController>().TriggerLightning();
+                    receiver.TriggerLightning();
                 }
             }
         }
@@ -62,6 +66,7 @@ public class Plate : MonoBehaviour
             chargedGenerator = false;
             BallController ball = other.GetComponentInChildren<BallController>();
             ball.Decharge();
+            receiver.StopLightning();
         }
     }
 

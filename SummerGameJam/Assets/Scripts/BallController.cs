@@ -43,12 +43,6 @@ public class BallController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        
-        
-    }
-
     private void OnCollisionStay(Collision collision)
     {
         if (rigidBody.velocity.magnitude >= 0.2f && !rollingBall.isPlaying)

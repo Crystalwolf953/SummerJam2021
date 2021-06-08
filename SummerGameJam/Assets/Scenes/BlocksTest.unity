@@ -664,6 +664,10 @@ PrefabInstance:
       propertyPath: lightning
       value: 
       objectReference: {fileID: 2042871728}
+    - target: {fileID: 1872759089584436849, guid: 59182c804fe71cf45aba632f3e347178, type: 3}
+      propertyPath: lightningEffect
+      value: 
+      objectReference: {fileID: 1107763038}
     - target: {fileID: 1872759089584436852, guid: 59182c804fe71cf45aba632f3e347178, type: 3}
       propertyPath: m_Name
       value: YellowCharger
@@ -721,6 +725,11 @@ PrefabInstance:
 --- !u!1 &1107763032 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1872759089584436852, guid: 59182c804fe71cf45aba632f3e347178, type: 3}
+  m_PrefabInstance: {fileID: 1107763031}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1107763038 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8468065767177302248, guid: 59182c804fe71cf45aba632f3e347178, type: 3}
   m_PrefabInstance: {fileID: 1107763031}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1127593658
@@ -1400,6 +1409,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1922278352500610617, guid: 6ea5f528b563de54389d60a170310d6c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774454810295167054, guid: 6ea5f528b563de54389d60a170310d6c, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774454810295167054, guid: 6ea5f528b563de54389d60a170310d6c, type: 3}
+      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8407140416590991032, guid: 6ea5f528b563de54389d60a170310d6c, type: 3}

@@ -24,6 +24,8 @@ public class ReceiverController : MonoBehaviour
     public Material orangeMaterial;
     public Material purpleMaterial;
 
+    public AudioSource lightningEffect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -71,6 +73,12 @@ public class ReceiverController : MonoBehaviour
     }
     public void TriggerLightning()
     {
+        if (!lightningEffect.isPlaying)
+        {
+            Debug.Log("Receiver");
+            lightningEffect.Play();
+        }
+
         if (color == LevelManager.Color.Yellow)
         {
             yellowLightning.Trigger();
@@ -95,5 +103,10 @@ public class ReceiverController : MonoBehaviour
         {
             purpleLightning.Trigger();
         }
+    }
+
+    public void StopLightning()
+    {
+        lightningEffect.Stop();
     }
 }
