@@ -214,6 +214,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: StraightPowerBlock
       objectReference: {fileID: 0}
+    - target: {fileID: 6317578925029434746, guid: e9b5ae983c6ce4317b9b0c0876d16979, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6317578925029434746, guid: e9b5ae983c6ce4317b9b0c0876d16979, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d70a0b331340c42afb431976ce2454a9, type: 2}
+    - target: {fileID: 6317578925029434746, guid: e9b5ae983c6ce4317b9b0c0876d16979, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 4913911580219713836, guid: e9b5ae983c6ce4317b9b0c0876d16979, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9b5ae983c6ce4317b9b0c0876d16979, type: 3}
 --- !u!4 &8741522179837236167 stripped
