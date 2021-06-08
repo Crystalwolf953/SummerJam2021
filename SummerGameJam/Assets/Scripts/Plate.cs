@@ -42,7 +42,7 @@ public class Plate : MonoBehaviour
             }
             else
             {
-                if(generator.GetComponent<ReceiverController>().ChangeColor(ball.color))
+                if(receiver.ChangeColor(ball.color))
                 {
                     chargedGenerator = true;
                 }
