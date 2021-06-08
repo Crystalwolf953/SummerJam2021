@@ -524,6 +524,10 @@ PrefabInstance:
       propertyPath: balls.Array.data[1]
       value: 
       objectReference: {fileID: 1910488043}
+    - target: {fileID: 3134423399577511567, guid: ab2ee7c14163dc2468b4d3e0a5bdb1fe, type: 3}
+      propertyPath: HolePlates.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab2ee7c14163dc2468b4d3e0a5bdb1fe, type: 3}
 --- !u!1001 &649059163
