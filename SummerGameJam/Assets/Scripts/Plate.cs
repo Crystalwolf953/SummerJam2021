@@ -77,6 +77,7 @@ public class Plate : MonoBehaviour
                 }
                 if(chargedGenerator)
                 {
+                    Debug.Log("Lightning");
                     receiver.TriggerLightning();
                 }
             }

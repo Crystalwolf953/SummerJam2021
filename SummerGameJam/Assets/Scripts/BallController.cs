@@ -167,5 +167,6 @@ public class BallController : MonoBehaviour
         charged = false;
         this.color = LevelManager.Color.Neutral;
         ballRenderer.material = neutralMaterial;
+        ballLight.color = Color.white;
     }
 }

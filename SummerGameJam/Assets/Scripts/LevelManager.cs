@@ -121,23 +121,23 @@ public class LevelManager : MonoBehaviour
 
         List<Vector3> from = new List<Vector3>();
         
-        for(int i = 0; i < balls.Count; i++)
+        for(int i = 0; i < HolePlates.Count; i++)
         {
             from.Add(HolePlates[i].activatingBall.transform.position);
         }
 
-        Vector3[] to = new Vector3[balls.Count];
+        Vector3[] to = new Vector3[HolePlates.Count];
 
         for (float t = 0f; t < timeTaken; t += (Time.deltaTime / timeTaken))
         {
-            for(int i = 0; i < balls.Count; i++ )
+            for(int i = 0; i < HolePlates.Count; i++ )
             {
                 to[i] = HolePlates[i].gameObject.transform.position;
             }
 
             target.rotation = Quaternion.Slerp(start, rotateTo, t);
 
-            for(int i = 0; i < balls.Count; i++)
+            for(int i = 0; i < HolePlates.Count; i++)
             {
                 balls[i].transform.position = Vector3.Lerp(from[i], new Vector3(to[i].x, to[i].y + 0.5f, to[i].z), t);
             }

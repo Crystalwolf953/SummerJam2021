@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.49641287, b: 0.5748173, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: a3c22d11bd52f75499062d6faab79d2e, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5268468706400123601, guid: b97bec5ac7eade2419095a6cf3f0d3a6, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5268468706400123601, guid: b97bec5ac7eade2419095a6cf3f0d3a6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -414,7 +414,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3462652269149051468, guid: 4fb86e61ac2a8e340a1a01fcf4a7aef3, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3462652269149051468, guid: 4fb86e61ac2a8e340a1a01fcf4a7aef3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -482,7 +482,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3134423399577511560, guid: ab2ee7c14163dc2468b4d3e0a5bdb1fe, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3134423399577511560, guid: ab2ee7c14163dc2468b4d3e0a5bdb1fe, type: 3}
       propertyPath: m_LocalPosition.x
@@ -847,7 +847,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &1148619867
 PrefabInstance:
@@ -1231,7 +1231,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5268468706400123601, guid: b97bec5ac7eade2419095a6cf3f0d3a6, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5268468706400123601, guid: b97bec5ac7eade2419095a6cf3f0d3a6, type: 3}
       propertyPath: m_LocalPosition.x

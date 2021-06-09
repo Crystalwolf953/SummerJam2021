@@ -18,6 +18,7 @@ public class ReceiverController : MonoBehaviour
     public GameObject sphere;
     private Renderer sphereRenderer;
     private Light sphereLight;
+    public Light spotLight;
     public bool isCharged;
 
     public Material neutralMaterial;
@@ -51,6 +52,9 @@ public class ReceiverController : MonoBehaviour
             isCharged = true;
             sphereLight.enabled = true;
         }
+
+        spotLight.enabled = !(newColor == requiredColor);
+
         if (newColor != color)
         {
             color = newColor;

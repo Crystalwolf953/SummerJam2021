@@ -22,7 +22,7 @@ public class ColliderController : MonoBehaviour
     {
         BallController ball = other.GetComponentInChildren<BallController>();
 
-        if(plate.holeTrigger && LevelManager.instance.allFlatPlatesActive)
+        if(plate.holeTrigger) //&& LevelManager.instance.allFlatPlatesActive)
         {
             this.GetComponentInParent<CapsuleCollider>().isTrigger = (ball != null && plate.ValidActivation(ball));
         }
