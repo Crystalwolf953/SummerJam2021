@@ -2019,6 +2019,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 303058322, guid: b97bec5ac7eade2419095a6cf3f0d3a6, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 303058322, guid: b97bec5ac7eade2419095a6cf3f0d3a6, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 303058322, guid: b97bec5ac7eade2419095a6cf3f0d3a6, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5268468706400123601, guid: b97bec5ac7eade2419095a6cf3f0d3a6, type: 3}
       propertyPath: m_RootOrder
       value: 3
