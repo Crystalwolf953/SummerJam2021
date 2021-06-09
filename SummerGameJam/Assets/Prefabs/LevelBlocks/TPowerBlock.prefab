@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5944234247712021880}
   - component: {fileID: 6696885319657977791}
   - component: {fileID: 7117416133964703115}
+  - component: {fileID: 4953006181316306712}
   m_Layer: 0
   m_Name: T-Block
   m_TagString: Untagged
@@ -81,6 +82,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4953006181316306712
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769642880690819292}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2968568417712993016, guid: fa65ddd9b22ad461796f4e9f8f49cb3a, type: 3}
 --- !u!1 &2789139674316817272
 GameObject:
   m_ObjectHideFlags: 0
