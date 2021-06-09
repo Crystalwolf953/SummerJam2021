@@ -2059,6 +2059,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5268468706400123602, guid: b97bec5ac7eade2419095a6cf3f0d3a6, type: 3}
+      propertyPath: color
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5268468706400123602, guid: b97bec5ac7eade2419095a6cf3f0d3a6, type: 3}
+      propertyPath: charged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5268468706400123612, guid: b97bec5ac7eade2419095a6cf3f0d3a6, type: 3}
       propertyPath: m_Name
       value: Ball (2)
