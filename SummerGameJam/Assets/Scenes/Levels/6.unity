@@ -520,7 +520,7 @@ PrefabInstance:
     - target: {fileID: 7709603125731406213, guid: 1d1d23a3f1a56a64194e6abb7d4db6d0, type: 3}
       propertyPath: EndObject
       value: 
-      objectReference: {fileID: 1065872740}
+      objectReference: {fileID: 0}
     - target: {fileID: 7709603125731406213, guid: 1d1d23a3f1a56a64194e6abb7d4db6d0, type: 3}
       propertyPath: StartObject
       value: 
@@ -873,7 +873,7 @@ PrefabInstance:
     - target: {fileID: 2410242136309185386, guid: c4203e7bf959c2649a2c37e57e89f3ab, type: 3}
       propertyPath: EndObject
       value: 
-      objectReference: {fileID: 1065872740}
+      objectReference: {fileID: 0}
     - target: {fileID: 2410242136309185386, guid: c4203e7bf959c2649a2c37e57e89f3ab, type: 3}
       propertyPath: StartObject
       value: 
@@ -1342,7 +1342,7 @@ PrefabInstance:
     - target: {fileID: 5842657353699560653, guid: 52f8062d624b08e448e64a3b0c8f35ac, type: 3}
       propertyPath: EndObject
       value: 
-      objectReference: {fileID: 1065872740}
+      objectReference: {fileID: 0}
     - target: {fileID: 5842657353699560653, guid: 52f8062d624b08e448e64a3b0c8f35ac, type: 3}
       propertyPath: StartObject
       value: 
@@ -1370,7 +1370,7 @@ PrefabInstance:
     - target: {fileID: 7586100130439491248, guid: 9d26f9c87a8bb4f44b3d58a72d2b3cf2, type: 3}
       propertyPath: EndObject
       value: 
-      objectReference: {fileID: 1065872740}
+      objectReference: {fileID: 0}
     - target: {fileID: 7586100130439491248, guid: 9d26f9c87a8bb4f44b3d58a72d2b3cf2, type: 3}
       propertyPath: StartObject
       value: 
@@ -1531,7 +1531,7 @@ MonoBehaviour:
   greenLightning: {fileID: 328210020}
   orangeLightning: {fileID: 1739797958}
   purpleLightning: {fileID: 1028320719}
-  sphere: {fileID: 1065872740}
+  sphere: {fileID: 0}
   spotLight: {fileID: 637913958}
   isCharged: 0
   neutralMaterial: {fileID: 2100000, guid: 3b6a6e30209f0c04aa080c673990d9a2, type: 2}
@@ -2100,7 +2100,7 @@ PrefabInstance:
     - target: {fileID: 7459718564762909323, guid: b977c667587c23b49a3dad37fccbc8e1, type: 3}
       propertyPath: EndObject
       value: 
-      objectReference: {fileID: 1065872740}
+      objectReference: {fileID: 0}
     - target: {fileID: 7459718564762909323, guid: b977c667587c23b49a3dad37fccbc8e1, type: 3}
       propertyPath: StartObject
       value: 
@@ -2364,7 +2364,7 @@ PrefabInstance:
     - target: {fileID: 8738944246033799110, guid: d61dba18827d83d44be78923675686b2, type: 3}
       propertyPath: EndObject
       value: 
-      objectReference: {fileID: 1065872740}
+      objectReference: {fileID: 0}
     - target: {fileID: 8738944246033799110, guid: d61dba18827d83d44be78923675686b2, type: 3}
       propertyPath: StartObject
       value: 
