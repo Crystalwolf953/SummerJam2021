@@ -365,6 +365,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1665022088}
     m_Modifications:
+    - target: {fileID: 7459718564762909323, guid: b977c667587c23b49a3dad37fccbc8e1, type: 3}
+      propertyPath: EndObject
+      value: 
+      objectReference: {fileID: 1665022091}
+    - target: {fileID: 7459718564762909323, guid: b977c667587c23b49a3dad37fccbc8e1, type: 3}
+      propertyPath: StartObject
+      value: 
+      objectReference: {fileID: 330719634}
     - target: {fileID: 7459718564773978241, guid: b977c667587c23b49a3dad37fccbc8e1, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -502,6 +510,14 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 5842657353699560653, guid: 52f8062d624b08e448e64a3b0c8f35ac, type: 3}
+      propertyPath: EndObject
+      value: 
+      objectReference: {fileID: 1665022091}
+    - target: {fileID: 5842657353699560653, guid: 52f8062d624b08e448e64a3b0c8f35ac, type: 3}
+      propertyPath: StartObject
+      value: 
+      objectReference: {fileID: 330719634}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52f8062d624b08e448e64a3b0c8f35ac, type: 3}
 --- !u!114 &216931502 stripped
@@ -752,12 +768,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1825228975811255152, guid: aaf1478bf5bc7b443aaecf5340ebac74, type: 3}
   m_PrefabInstance: {fileID: 330719632}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 330719634}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10336c98c28dc8249a28048f2d33cb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &330719634 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1825228975811255163, guid: aaf1478bf5bc7b443aaecf5340ebac74, type: 3}
+  m_PrefabInstance: {fileID: 330719632}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &335518228
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1575,6 +1596,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1665022088}
     m_Modifications:
+    - target: {fileID: 7586100130439491248, guid: 9d26f9c87a8bb4f44b3d58a72d2b3cf2, type: 3}
+      propertyPath: EndObject
+      value: 
+      objectReference: {fileID: 1665022091}
+    - target: {fileID: 7586100130439491248, guid: 9d26f9c87a8bb4f44b3d58a72d2b3cf2, type: 3}
+      propertyPath: StartObject
+      value: 
+      objectReference: {fileID: 330719634}
     - target: {fileID: 7586100130446243002, guid: 9d26f9c87a8bb4f44b3d58a72d2b3cf2, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -1983,6 +2012,14 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 8738944246033799110, guid: d61dba18827d83d44be78923675686b2, type: 3}
+      propertyPath: EndObject
+      value: 
+      objectReference: {fileID: 1665022091}
+    - target: {fileID: 8738944246033799110, guid: d61dba18827d83d44be78923675686b2, type: 3}
+      propertyPath: StartObject
+      value: 
+      objectReference: {fileID: 330719634}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d61dba18827d83d44be78923675686b2, type: 3}
 --- !u!114 &1173509714 stripped
@@ -2921,6 +2958,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1665022088}
     m_Modifications:
+    - target: {fileID: 7709603125731406213, guid: 1d1d23a3f1a56a64194e6abb7d4db6d0, type: 3}
+      propertyPath: EndObject
+      value: 
+      objectReference: {fileID: 1665022091}
+    - target: {fileID: 7709603125731406213, guid: 1d1d23a3f1a56a64194e6abb7d4db6d0, type: 3}
+      propertyPath: StartObject
+      value: 
+      objectReference: {fileID: 330719634}
     - target: {fileID: 7709603125738285967, guid: 1d1d23a3f1a56a64194e6abb7d4db6d0, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -3034,6 +3079,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1665022088}
     m_Modifications:
+    - target: {fileID: 2410242136309185386, guid: c4203e7bf959c2649a2c37e57e89f3ab, type: 3}
+      propertyPath: EndObject
+      value: 
+      objectReference: {fileID: 1665022091}
+    - target: {fileID: 2410242136309185386, guid: c4203e7bf959c2649a2c37e57e89f3ab, type: 3}
+      propertyPath: StartObject
+      value: 
+      objectReference: {fileID: 330719634}
     - target: {fileID: 2410242136315928928, guid: c4203e7bf959c2649a2c37e57e89f3ab, type: 3}
       propertyPath: m_RootOrder
       value: 8
