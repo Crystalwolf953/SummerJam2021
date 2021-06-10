@@ -67,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: -5715096386588351883, guid: 8243f5123e53a4be1ad0d2d6146d59e2, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -96,20 +96,6 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2405789202032073927}
-  m_Mesh: {fileID: -244531769438703215, guid: 8ccd181f16d534a43ab1eb83593592b8, type: 3}
---- !u!64 &4769026311923705992
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7346286476142863562}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
   m_Mesh: {fileID: -244531769438703215, guid: 8ccd181f16d534a43ab1eb83593592b8, type: 3}
 --- !u!108 &1859640130266973782
 Light:
@@ -173,6 +159,20 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!64 &4769026311923705992
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7346286476142863562}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -244531769438703215, guid: 8ccd181f16d534a43ab1eb83593592b8, type: 3}
 --- !u!1001 &3587422227566803574
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -235,7 +235,7 @@ PrefabInstance:
     - target: {fileID: 6317578925029434746, guid: 8ccd181f16d534a43ab1eb83593592b8, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 836178f82d70e1d49b745c428de80c65, type: 2}
+      objectReference: {fileID: -5715096386588351883, guid: 8243f5123e53a4be1ad0d2d6146d59e2, type: 3}
     - target: {fileID: 6317578925029434746, guid: 8ccd181f16d534a43ab1eb83593592b8, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
