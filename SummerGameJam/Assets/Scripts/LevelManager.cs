@@ -111,7 +111,7 @@ public class LevelManager : MonoBehaviour
                 plate.activated = false;
             }
 
-            StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1, false));
+            StartCoroutine(LoadLevel((SceneManager.GetActiveScene().buildIndex + 1) % 9, false));
         }
     }
 

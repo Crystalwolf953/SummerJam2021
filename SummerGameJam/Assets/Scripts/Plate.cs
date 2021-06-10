@@ -59,28 +59,34 @@ public class Plate : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         BallController ball = other.GetComponentInChildren<BallController>();
-        if(ball != null && ValidActivation(ball))
+        if (ball != null && ValidActivation(ball))
         {
-            activated = true;
-            if(holeTrigger)
+            if (holeTrigger)
             {
                 activatingBall = ball.gameObject;
+                Debug.Log(activatingBall.name);
             }
             else
             {
-                if(receiver.ChangeColor(ball.color))
+                if (receiver.ChangeColor(ball.color))
                 {
                     chargedGenerator = true;
                 }
-                if(chargedGenerator)
+                if (chargedGenerator)
                 {
                     receiver.TriggerLightning();
                 }
             }
+            activated = true;
         }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        
     }
 
     private void OnTriggerExit(Collider other)
