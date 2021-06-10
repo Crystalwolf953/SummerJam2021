@@ -22,7 +22,7 @@ public class Menuing : MonoBehaviour
     void Update()
     {
         // Used to open the options ui or the inventory ui, but not both
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetButtonDown("Escape"))
         {
             if(GameIsPaused)
             {
