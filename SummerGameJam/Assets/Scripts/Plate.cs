@@ -40,6 +40,11 @@ public class Plate : MonoBehaviour
     {
         if(holeTrigger)
         {
+            if(activatingBall != null)
+            {
+                activated = ValidActivation(activatingBall.GetComponent<BallController>());
+            }
+
             if(nextIntensity == 1f)
             {
                 holeLight.intensity += lightChange;
@@ -59,7 +64,7 @@ public class Plate : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         BallController ball = other.GetComponentInChildren<BallController>();
         if (ball != null && ValidActivation(ball))
