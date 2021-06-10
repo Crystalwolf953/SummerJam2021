@@ -72,7 +72,6 @@ public class Plate : MonoBehaviour
             if (holeTrigger)
             {
                 activatingBall = ball.gameObject;
-                Debug.Log(activatingBall.name);
             }
             else
             {
